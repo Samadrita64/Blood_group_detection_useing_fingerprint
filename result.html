@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Prediction Result</h1>
+        <img src="{{ url_for('static', filename='uploads/' + img_path.split('/')[-1]) }}" alt="Uploaded Image" width="300">
+        <h2>Predicted Blood Group: <span class="result">{{ label }}</span></h2>
+        <a href="{{ url_for('index') }}">Try Again</a>
+    </div>
+</body>
+</html>
